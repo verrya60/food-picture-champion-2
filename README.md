@@ -1,33 +1,12 @@
-# Golden Tonkotsu Ramen — Steaming Noodle Lift, Seared Chashu & Jammy Egg in Chili-Oil Broth
+# Golden Tonkotsu Ramen
 
-Entry for make.fun bounty `food-picture-01` ("Make the best-looking food picture").
+A steaming bowl of tonkotsu ramen, photographed as a hero shot: springy
+noodles lifted high by wooden chopsticks, seared chashu pork, a halved
+soft-boiled egg with a jammy orange yolk, and chili-oil swirls glistening
+on the rich creamy broth. A sheet of nori and a scatter of spring onions
+finish the bowl, lit by warm window light on a dark rustic wood table.
 
-**Title for submission:** *Golden Tonkotsu Ramen — Steaming Noodle Lift, Seared Chashu & Jammy Egg in Chili-Oil Broth*
-
-## The picture
-
-A photorealistic hero shot of a steaming bowl of tonkotsu ramen, filling the
-frame: glossy noodles lifted by chopsticks, seared chashu pork, a halved
-soft-boiled egg with a jammy orange yolk, chili-oil swirls, nori and scallions
-in a rich golden broth, on a dark rustic wooden table in warm window light.
-Single dish, no text, no hands — it reads clearly even at 300 px wide.
-
-## How it works
-
-`main.py` (Python 3, standard library only, no network, deterministic) copies
-the repo-held image `entry.png` to `$MAKEFUN_OUTPUT_DIR/entry.png`
-(default `/output/entry.png`).
-
-`entry.png` is JPEG bytes under the `entry.png` name (allowed by the rules:
-the file is told apart by its first bytes), 1024×683 px, 184,211 bytes —
-within the ≤1024×1024 px and ≤1 MiB limits.
-
-## Run locally
-
-```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
-
-## License
-
-MIT — see `LICENSE`.
+`main.py` copies the bundled `entry.png` (a JPEG) to `/output/entry.png`,
+validating it first: it must exist, be a whole JPEG under 1 MiB and
+1024x1024, and the copy must match byte for byte. The program is
+deterministic — every run writes the same bytes.
